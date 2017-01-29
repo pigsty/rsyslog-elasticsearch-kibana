@@ -6,6 +6,8 @@ Contains several pre-configured dashboards for [freeIPA](http://www.freeipa.org/
 
 To get this image, pull it from [docker hub](https://registry.hub.docker.com/u/pschiffe/rsyslog-elasticsearch-kibana/):
 
+Update: forked to change timestamp field to @timestamp for compatability with Elastalert
+
 ```
 $ docker pull pschiffe/rsyslog-elasticsearch-kibana
 ```
@@ -31,4 +33,3 @@ $ logger -n localhost 'log message from host'
 Kibana is available via regular web browser on [http://localhost:5601](http://localhost:5601) address from the host system. Please note, that it can take up to 10 seconds for container to be ready after start.
 
 Elasticsearch is storing data in [docker data volume](https://docs.docker.com/userguide/dockervolumes/) `/var/lib/elasticsearch`.
-
